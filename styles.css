@@ -367,6 +367,34 @@ p {
     padding-bottom: 0;
 }
 
+.award-snapshot {
+    display: grid;
+    grid-template-columns: 86px minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+    color: var(--muted);
+}
+
+.award-snapshot:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.award-snapshot img {
+    display: block;
+    width: 86px;
+    aspect-ratio: 17 / 22;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--paper);
+    object-fit: cover;
+    object-position: top center;
+}
+
+.award-snapshot span {
+    min-width: 0;
+}
+
 .item-head {
     display: flex;
     justify-content: space-between;
