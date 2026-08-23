@@ -39,6 +39,17 @@ a:hover {
     text-decoration: underline;
 }
 
+.text-link {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: rgba(53, 109, 115, 0.32);
+    text-underline-offset: 3px;
+}
+
+.text-link:hover {
+    text-decoration-color: currentColor;
+}
+
 strong {
     font-weight: 700;
 }
@@ -253,7 +264,7 @@ p {
 
 .news-list li {
     display: grid;
-    grid-template-columns: 54px minmax(0, 1fr);
+    grid-template-columns: 64px minmax(0, 1fr);
     gap: 18px;
     padding: 13px 2px;
     border-bottom: 1px solid var(--line);
@@ -716,7 +727,7 @@ p {
     }
 
     .news-list li {
-        grid-template-columns: 46px minmax(0, 1fr);
+        grid-template-columns: 64px minmax(0, 1fr);
         gap: 12px;
         padding: 12px 1px;
     }
