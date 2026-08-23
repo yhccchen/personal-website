@@ -66,7 +66,7 @@ strong {
 .brand {
     color: var(--ink);
     font-family: "Lora", Georgia, serif;
-    font-size: 1.02rem;
+    font-size: 1.14rem;
     font-weight: 600;
 }
 
@@ -247,19 +247,16 @@ p {
 .news-list {
     margin: 0;
     padding: 0;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
     list-style: none;
+    border-top: 1px solid var(--line);
 }
 
 .news-list li {
-    display: block;
-    min-height: 122px;
-    padding: 19px 20px;
-    border: 1px solid var(--line);
-    border-radius: 13px;
-    background: var(--surface);
+    display: grid;
+    grid-template-columns: 54px minmax(0, 1fr);
+    gap: 18px;
+    padding: 13px 2px;
+    border-bottom: 1px solid var(--line);
 }
 
 .news-list time,
@@ -270,28 +267,26 @@ p {
     font-weight: 700;
 }
 
+.news-list time {
+    color: var(--subtle);
+    font-weight: 600;
+}
+
 .news-list span {
     display: block;
     color: var(--muted);
-    font-size: 0.92rem;
-    line-height: 1.58;
-}
-
-.highlights-title {
-    color: var(--highlight);
-}
-
-.news-list .highlight-key {
-    margin-bottom: 7px;
-    color: var(--ink);
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.015em;
+    font-size: 0.9rem;
+    line-height: 1.55;
 }
 
 .news-list strong {
     color: var(--ink);
     font-weight: 600;
+}
+
+.news-section > .section-inner {
+    padding-top: 44px !important;
+    padding-bottom: 44px !important;
 }
 
 .timeline-item {
@@ -385,6 +380,14 @@ p {
 .authors {
     margin-bottom: 11px;
     color: var(--muted);
+}
+
+.author-note {
+    margin-top: -5px;
+    margin-bottom: 11px;
+    color: var(--subtle);
+    font-size: 0.8rem;
+    font-style: italic;
 }
 
 .pub-links {
@@ -704,10 +707,6 @@ p {
         font-size: 1rem;
     }
 
-    .news-list {
-        grid-template-columns: 1fr;
-    }
-
     .item-head {
         display: block;
     }
@@ -717,8 +716,9 @@ p {
     }
 
     .news-list li {
-        min-height: auto;
-        padding: 17px 18px;
+        grid-template-columns: 46px minmax(0, 1fr);
+        gap: 12px;
+        padding: 12px 1px;
     }
 
     .publication-featured {
