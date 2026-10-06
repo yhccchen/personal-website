@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yu-Hsiang Chen</title>
-    <meta name="description" content="Yu-Hsiang Chen researches autonomous driving safety, heterogeneous traffic simulation, and multimodal driving intelligence.">
+    <meta name="description" content="Yu-Hsiang Chen studies efficient learning and robustness in autonomous systems through datasets and benchmarks, controllable generative models, and multimodal adaptation.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,13 +14,13 @@
 <body>
     <header class="site-header">
         <nav class="nav-shell" aria-label="Primary navigation">
-            <a class="brand" href="#top">Yu-Hsiang Chen</a>
-            <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+            <h1 class="site-name"><a class="brand" href="#top">Yu-Hsiang Chen</a></h1>
+            <button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="nav-menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -35,25 +35,25 @@
         <section class="hero section" id="about">
             <div class="section-inner hero-inner">
                 <div class="hero-copy">
-                    <p>
-                        I am a master's student in Computer Science at National Yang Ming Chiao Tung University (NYCU), advised by <a class="text-link" href="https://sites.google.com/site/yitingchen0524/home">Prof. Yi-Ting Chen</a>. My research focuses on autonomous driving safety and validation, with particular interests in data-efficient, controllable, and realistic simulation of heterogeneous traffic, as well as multimodal driving intelligence.
+                    <p class="hero-intro">
+                        I received my master's degree in Computer Science from National Yang Ming Chiao Tung University (NYCU), advised by <a class="text-link" href="https://sites.google.com/site/yitingchen0524/home">Prof. Yi-Ting Chen</a>. I study how autonomous systems can <strong>learn efficiently and remain robust in unfamiliar situations</strong>. Previously, I was a visiting researcher at the Mechanical Systems Control Laboratory (MSC Lab), UC Berkeley, working with <a class="text-link" href="https://msc.berkeley.edu/people/tomizuka.html">Prof. Masayoshi Tomizuka</a>.
                     </p>
                     <p>
-                        I was a visiting researcher at the MSC Lab, University of California, Berkeley, working with <a class="text-link" href="https://msc.berkeley.edu/people/tomizuka.html">Prof. Masayoshi Tomizuka</a>. My recent work includes publications at ECCV 2026 and ICRA 2026, along with top placements in the CVPR 2026 doScenes Instructed Driving Challenge.
+                        My research spans datasets and benchmarks for autonomous systems, controllable generative models for simulation, and efficient adaptation of multimodal models. I aim to connect these directions into a learning loop that identifies gaps in a system’s experience, generates targeted counterfactual scenarios, and uses failures to guide what the system learns next. My work includes first-author papers at ECCV and ICRA, as well as contributions to workshops at CVPR, ICCV, and ECCV.
                     </p>
                     <p class="availability">
-                        I am seeking Fall 2027 PhD opportunities and am open to research collaborations.
+                        I am seeking <strong>Fall 2027 PhD opportunities</strong> and welcome research collaborations.
                     </p>
                     <div class="hero-actions" aria-label="Profile links">
                         <a href="mailto:bob020416.cs13@nycu.edu.tw"><i class="fa-solid fa-envelope"></i>Email</a>
                         <a href="https://scholar.google.com/citations?user=sS6RCpkAAAAJ&amp;hl=en&amp;authuser=2"><i class="fa-solid fa-graduation-cap"></i>Google Scholar</a>
                         <a href="https://github.com/bob020416"><i class="fa-brands fa-github"></i>GitHub</a>
                         <a href="https://www.linkedin.com/in/bob-chen0828/"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
-                        <span class="cv-link" title="CV file coming soon"><i class="fa-solid fa-file-lines"></i>CV</span>
+                        <a href="media/佑祥CV202608.pdf" target="_blank" rel="noopener noreferrer" aria-label="Curriculum vitae (PDF)"><i class="fa-solid fa-file-lines" aria-hidden="true"></i>CV</a>
                     </div>
                 </div>
                 <div class="hero-photo">
-                    <img src="media/personal_iamge.png" alt="Portrait of Yu-Hsiang Chen" class="profile-photo">
+                    <img src="media/portrait.webp" width="420" height="564" alt="Portrait of Yu-Hsiang Chen" class="profile-photo" fetchpriority="high">
                 </div>
             </div>
         </section>
@@ -63,6 +63,10 @@
                 <h2 class="section-title">News</h2>
                 <div class="news-content">
                     <ul class="news-list" id="news-list">
+                        <li>
+                            <time datetime="2026-09">2026.09</time>
+                            <span>Organized the first <a class="text-link" href="https://hetroddata.github.io/HetroD/challenge.html"><strong>Heterogeneous Traffic Simulation Challenge</strong></a> at the ECCV 2026 DriveX Workshop.</span>
+                        </li>
                         <li>
                             <time datetime="2026-09">2026.09</time>
                             <span>Co-organized the <a class="text-link" href="https://drivex-workshop.github.io/eccv2026/#organizers"><strong>DriveX Workshop at ECCV 2026</strong></a>.</span>
@@ -93,46 +97,70 @@
         </section>
 
         <section class="section" id="publications">
-            <div class="section-inner split-section">
+            <div class="section-inner publications-inner">
                 <h2 class="section-title">Publications</h2>
                 <div class="publication-list">
-                    <article class="publication">
-                        <h3>ECoSim: Data-Efficient Fine-Tuning for Controllable Traffic Simulation</h3>
+                    <article class="publication publication-with-teaser">
+                        <div class="publication-copy">
+                        <h3>ECoSim: Data Efficient Fine-Tuning for Controllable Traffic Simulation</h3>
                         <p class="pub-status">ECCV 2026</p>
-                        <p class="authors"><strong>Y.-H. Chen</strong>, W.-J. Chang, M. Tomizuka, Y.-T. Chen</p>
+                        <p class="authors"><strong>Yu-Hsiang Chen*</strong>, Wei-Jer Chang*, Yi-Ting Chen, Masayoshi Tomizuka</p>
+                        <p class="author-note">* Co-first authors (equal contribution).</p>
                         <p class="pub-links"><a href="https://arxiv.org/abs/2607.00545">Paper</a><span aria-hidden="true">·</span><a href="https://ecosim-web.github.io/">Project</a></p>
+                        </div>
+                        <a class="publication-teaser" href="media/ECoSim-teaser.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge the ECoSim overview figure">
+                            <img src="media/ECoSim-teaser.webp" width="840" height="463" alt="ECoSim sketch, latent, and text controls for traffic simulation" loading="lazy" decoding="async">
+                        </a>
                     </article>
-                    <article class="publication">
-                        <h3>HetroD: A High-Fidelity Drone Dataset and Benchmark for Heterogeneous Traffic in Autonomous Driving</h3>
+                    <article class="publication publication-with-teaser">
+                        <div class="publication-copy">
+                        <h3>HetroD: A High-Fidelity Drone Dataset and Benchmark for Autonomous Driving in Heterogeneous Traffic</h3>
                         <p class="pub-status">ICRA 2026</p>
-                        <p class="authors"><strong>Y.-H. Chen</strong>, W.-J. Chang, C. Kotulla, T. Keutgens, S. Runde, T. Moers, C. Klas, W. Zhan, M. Tomizuka, Y.-T. Chen</p>
+                        <p class="authors"><strong>Yu-Hsiang Chen</strong>, Wei-Jer Chang, Christian Kotulla, Thomas Keutgens, Steffen Runde, Tobias Moers, Christoph Klas, Wei Zhan, Masayoshi Tomizuka, Yi-Ting Chen</p>
                         <p class="pub-links"><a href="https://arxiv.org/abs/2602.03447">Paper</a><span aria-hidden="true">·</span><a href="https://hetroddata.github.io/HetroD/">Project</a></p>
+                        </div>
+                        <a class="publication-teaser" href="media/HetroD-teaser.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge the HetroD overview figure">
+                            <img src="media/HetroD-teaser.webp" width="802" height="426" alt="HetroD drone dataset, heterogeneous traffic maneuvers, and benchmark tasks" loading="lazy" decoding="async">
+                        </a>
                     </article>
                     <article class="publication publication-featured">
                         <div class="publication-copy">
                             <h3>NudgeVAD: Language-Nudged End-to-End Driving via FiLM Residuals</h3>
                             <p class="pub-status">CVPR 2026 doScenes Instructed Driving Challenge</p>
-                            <p class="authors">C.-C. Yang*, <strong>Y.-H. Chen*</strong>, Y.-T. Chen</p>
+                            <p class="authors">Chieh-Chi Yang*, <strong>Yu-Hsiang Chen*</strong>, Yi-Ting Chen</p>
                             <p class="author-note">* Co-first authors (equal contribution).</p>
                             <p class="placement"><strong>1st Place</strong> — Ablation Track <span aria-hidden="true">·</span> <strong>Runner-up</strong> — Full Multimodal End-to-End Track</p>
                             <p class="pub-links"><a href="https://arxiv.org/abs/2605.24531">Paper</a></p>
                         </div>
                         <div class="publication-previews">
-                            <a class="document-preview paper-preview" href="media/NudgeVAD.pdf" aria-label="Open the NudgeVAD paper PDF">
-                                <span class="paper-frame"><img src="media/NudgeVAD-thumbnail.jpg" alt="First page of the NudgeVAD paper"></span>
+                            <a class="document-preview paper-preview" href="media/NudgeVAD.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open the NudgeVAD paper PDF">
+                                <span class="paper-frame"><img src="media/NudgeVAD-thumbnail.webp" width="306" height="396" alt="First page of the NudgeVAD paper" loading="lazy" decoding="async"></span>
                                 <span>Paper</span>
                             </a>
-                            <a class="document-preview certificate-preview" href="media/nudgeVAD-doScenesRecognition.pdf" aria-label="Open NudgeVAD doScenes recognition certificate PDF">
-                                <span class="certificate-frame"><img src="media/nudgeVAD-doScenesRecognition.png" alt="NudgeVAD doScenes recognition certificate"></span>
+                            <a class="document-preview certificate-preview" href="media/nudgeVAD-doScenesRecognition.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open NudgeVAD doScenes recognition certificate PDF">
+                                <span class="certificate-frame"><img src="media/NudgeVAD-certificate.webp" width="612" height="792" alt="NudgeVAD doScenes recognition certificate" loading="lazy" decoding="async"></span>
                                 <span>Certificate</span>
                             </a>
                         </div>
                     </article>
                     <article class="publication">
+                        <div class="publication-copy">
+                            <h3>On the Feasibility of Activation Steering for End-to-End Driving</h3>
+                            <p class="pub-status">ECCV 2026 DriveX Workshop <span class="venue-note">· Non-Archival Track</span></p>
+                            <p class="authors">Shu-Wei Lu, Jinsu Yoo, <strong>Yu-Hsiang Chen</strong>, Yi-Hsuan Tsai, Wei-Lun Chao, Yi-Ting Chen</p>
+                            <p class="pub-links"><a href="https://openreview.net/pdf?id=fYoW8cS84a">Paper</a></p>
+                        </div>
+                    </article>
+                    <article class="publication publication-with-teaser">
+                        <div class="publication-copy">
                         <h3>V2X-based Logical Scenario Understanding with Vision-Language Models</h3>
                         <p class="pub-status">ICCV 2025 DriveX Workshop</p>
-                        <p class="authors">C.-L. Chi, Z.-H. Li, <strong>Y.-H. Chen</strong>, Y.-T. Chen</p>
+                        <p class="authors">Cheng-Liang Chi, Zi-Hui Li, <strong>Yu-Hsiang Chen</strong>, Yi-Ting Chen</p>
                         <p class="pub-links"><a href="media/publication3.pdf">Paper</a></p>
+                        </div>
+                        <a class="publication-teaser" href="media/V2X-teaser.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge the V2X scenario understanding figure">
+                            <img src="media/V2X-teaser.webp" width="717" height="600" alt="Drone-view and ego-view video evaluation pipeline for vision-language models" loading="lazy" decoding="async">
+                        </a>
                     </article>
                 </div>
             </div>
@@ -145,7 +173,7 @@
                     <article class="publication">
                         <h3>Low-Risk Arbitrage Strategy via Inter-Cryptocurrency Correlation Analysis in High-Frequency Trading</h3>
                         <p class="pub-status">NSTC Undergraduate Research Project, 2023</p>
-                        <p class="authors"><strong>Y.-H. Chen</strong></p>
+                        <p class="authors"><strong>Yu-Hsiang Chen</strong></p>
                         <p class="pub-links"><a href="media/publication1.pdf">Report</a></p>
                     </article>
                 </div>
@@ -158,21 +186,21 @@
                 <div class="experience-list">
                     <article class="experience-item">
                         <div class="item-head">
-                            <h3><img class="org-logo-img org-logo-wide" src="media/logos/berkeley.png" alt="UC Berkeley logo">University of California, Berkeley</h3>
+                            <h3><img class="org-logo-img org-logo-wide" src="media/logos/berkeley-compact.webp" width="64" height="40" alt="" loading="lazy">University of California, Berkeley</h3>
                             <p>Jun 2025 – Dec 2025</p>
                         </div>
                         <p class="experience-role">Visiting Researcher <span aria-hidden="true">·</span> MSC Lab</p>
                     </article>
                     <article class="experience-item">
                         <div class="item-head">
-                            <h3><img class="org-logo-img org-logo-wide" src="media/logos/nycu.png" alt="NYCU logo">National Yang Ming Chiao Tung University</h3>
+                            <h3><img class="org-logo-img org-logo-wide" src="media/logos/nycu-compact.webp" width="64" height="40" alt="" loading="lazy">National Yang Ming Chiao Tung University</h3>
                             <p>Sep 2024 – Jun 2026</p>
                         </div>
                         <p class="experience-role">Graduate Researcher <span aria-hidden="true">·</span> HCIS Lab</p>
                     </article>
                     <article class="experience-item">
                         <div class="item-head">
-                            <h3><img class="org-logo-img org-logo-mark" src="media/logos/nthu.jpg" alt="NTHU logo">National Tsing Hua University</h3>
+                            <h3><img class="org-logo-img org-logo-mark" src="media/logos/nthu.jpg" width="64" height="40" alt="" loading="lazy">National Tsing Hua University</h3>
                             <p>Sep 2022 – Jun 2024</p>
                         </div>
                         <p class="experience-role">Undergraduate Researcher <span aria-hidden="true">·</span> IS Lab</p>
@@ -187,15 +215,15 @@
                 <div class="experience-list">
                     <article class="experience-item">
                         <div class="item-head">
-                            <h3><img class="org-logo-img org-logo-wide" src="media/logos/synology.jpg" alt="Synology logo">Synology</h3>
-                            <p>Jun 2026 – Mar 2027</p>
+                            <h3><img class="org-logo-img org-logo-wide" src="media/logos/synology.jpg" width="64" height="40" alt="" loading="lazy">Synology</h3>
+                            <p>Jul 2026 – Present</p>
                         </div>
                         <p class="experience-role">Research Intern</p>
                     </article>
                     <article class="experience-item">
                         <div class="item-head">
-                            <h3><img class="org-logo-img org-logo-wide" src="media/logos/geniideas.svg" alt="Geniideas logo">Geniideas</h3>
-                            <p>Jun 2023 – Apr 2026</p>
+                            <h3><img class="org-logo-img org-logo-wide" src="media/logos/geniideas.svg" width="64" height="40" alt="" loading="lazy">Geniideas</h3>
+                            <p>Jun 2023 – Jun 2026</p>
                         </div>
                         <p class="experience-role">R&amp;D Intern</p>
                     </article>
@@ -208,13 +236,13 @@
                 <h2 class="section-title">Education</h2>
                 <div class="timeline-list">
                     <div class="timeline-item">
-                        <h3><img class="org-logo-img org-logo-wide" src="media/logos/nycu.png" alt="NYCU logo">National Yang Ming Chiao Tung University</h3>
+                        <h3><img class="org-logo-img org-logo-wide" src="media/logos/nycu-compact.webp" width="64" height="40" alt="" loading="lazy">National Yang Ming Chiao Tung University</h3>
                         <p><strong>M.S. in Computer Science</strong> <span aria-hidden="true">·</span> 2024–2026</p>
                     </div>
                     <div class="timeline-item">
-                        <h3><img class="org-logo-img org-logo-mark" src="media/logos/nthu.jpg" alt="NTHU logo">National Tsing Hua University</h3>
+                        <h3><img class="org-logo-img org-logo-mark" src="media/logos/nthu.jpg" width="64" height="40" alt="" loading="lazy">National Tsing Hua University</h3>
                         <p><strong>B.S. in Technology Management</strong> <span aria-hidden="true">·</span> 2020–2024</p>
-                        <p><strong>Ranked 2nd out of 65 <span aria-hidden="true">·</span> GPA: 4.0/4.0</strong></p>
+                        <p><strong>Ranked 2nd out of 65 <span aria-hidden="true">·</span> GPA: 4.08/4.3</strong></p>
                     </div>
                 </div>
             </div>
@@ -239,7 +267,7 @@
                 <h2 class="section-title">Academic Service</h2>
                 <ul class="plain-list">
                     <li><strong>Organizer</strong> — DriveX Workshops at ICCV 2025 and <a class="text-link" href="https://drivex-workshop.github.io/eccv2026/#organizers">ECCV 2026</a></li>
-                    <li><strong>Initiator</strong> — Heterogeneous Traffic Simulation Challenge</li>
+                    <li><strong>Initiator</strong> — <a class="text-link" href="https://hetroddata.github.io/HetroD/challenge.html">Heterogeneous Traffic Simulation Challenge</a></li>
                     <li><strong>Reviewer</strong> — NeurIPS, CVPR, ECCV, ICRA, IEEE RA-L, IEEE T-Rel, IJPRAI</li>
                 </ul>
             </div>
@@ -249,13 +277,13 @@
             <div class="section-inner split-section">
                 <h2 class="section-title">Contact</h2>
                 <div>
-                    <p>I am seeking <strong>Fall 2027 PhD opportunities</strong> in autonomous driving safety, traffic simulation, and multimodal driving intelligence.</p>
+                    <p>I am seeking <strong>Fall 2027 PhD opportunities</strong> in efficient learning and robust autonomous systems, with interests in controllable generative models and multimodal intelligence.</p>
                     <div class="contact-links contact-links-inline" aria-label="Contact and profile links">
-                        <a href="mailto:bob020416.cs13@nycu.edu.tw">Email</a><span aria-hidden="true">·</span>
+                        <a href="mailto:bob020416.cs13@nycu.edu.tw">bob020416.cs13@nycu.edu.tw</a><span aria-hidden="true">·</span>
                         <a href="https://scholar.google.com/citations?user=sS6RCpkAAAAJ&amp;hl=en&amp;authuser=2">Google Scholar</a><span aria-hidden="true">·</span>
                         <a href="https://github.com/bob020416">GitHub</a><span aria-hidden="true">·</span>
                         <a href="https://www.linkedin.com/in/bob-chen0828/">LinkedIn</a><span aria-hidden="true">·</span>
-                        <span class="cv-link" title="CV file coming soon">CV</span>
+                        <a href="media/佑祥CV202608.pdf" target="_blank" rel="noopener noreferrer" aria-label="Curriculum vitae (PDF)">CV</a>
                     </div>
                 </div>
             </div>
